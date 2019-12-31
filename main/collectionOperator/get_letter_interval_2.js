@@ -12,11 +12,11 @@ function get_letter_interval_2(number_a, number_b) {
       newArr.push(item);
     }
     for (var i = 27; i <= number_b; i++) {
-      ({ itemTens, itemOnes, item } = doubleWords(i, item, newArr));
+      newArr = doubleWords(i, item, newArr);
     }
   } else if (number_a > number_b) {
     for (var i = number_a; i >= 27; i--) {
-      ({ itemTens, itemOnes, item } = doubleWords(i, item, newArr));
+      newArr = doubleWords(i, item, newArr);
     }
     for (var i = 26; i >= number_b; i--) {
       item = String.fromCharCode(96 + i);
@@ -28,7 +28,7 @@ function get_letter_interval_2(number_a, number_b) {
         item = String.fromCharCode(96 + i);
         newArr.push(item);
       } else if (i > 26) {
-        ({ itemTens, itemOnes, item } = doubleWords(i, item, newArr));
+        newArr = doubleWords(i, item, newArr);
       }
   }
   return newArr;
@@ -39,7 +39,7 @@ function doubleWords(i, item, newArr) {
   var itemOnes = i - itemTens * 26;
   item = `${String.fromCharCode(96 + itemTens)}${String.fromCharCode(96 + itemOnes)}`;
   newArr.push(item);
-  return { itemTens, itemOnes, item };
+  return newArr;
 }
 
 module.exports = get_letter_interval_2;
