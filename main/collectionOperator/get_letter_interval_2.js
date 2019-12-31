@@ -4,8 +4,8 @@ function get_letter_interval_2(number_a, number_b) {
   //在这里写入代码
   var newArr = [];
   var item;
-  var itemTens;
-  var itemOnes;
+  var itemFormer;
+  var itemLatter;
   if (number_a < number_b) {
     for (var i = number_a; i <= 26; i++) {
       item = String.fromCharCode(96 + i);
@@ -35,9 +35,9 @@ function get_letter_interval_2(number_a, number_b) {
 }
 
 function doubleWords(i, item, newArr) {
-  var itemTens = Math.floor((i - 1) / 26);
-  var itemOnes = i - itemTens * 26;
-  item = `${String.fromCharCode(96 + itemTens)}${String.fromCharCode(96 + itemOnes)}`;
+  var itemFormer = Math.floor((i - 1) / 26);
+  var itemLatter = i - itemFormer * 26;
+  item = `${String.fromCharCode(96 + itemFormer)}${String.fromCharCode(96 + itemLatter)}`;
   newArr.push(item);
   return newArr;
 }
