@@ -1,7 +1,15 @@
 'use strict';
 
+function ListNode(val){
+  this.val = val;
+  this.next = null;
+}
+
 function compute_chain_median(collection) {
   //在这里写入代码
+  
 }
+
+
 
 module.exports = compute_chain_median;
