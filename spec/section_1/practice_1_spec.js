@@ -1,6 +1,6 @@
 'use strict';
 
-var collect_same_elements = require("../../main/section_1/practice_1/practice.js");
+var collect_same_elements = require("../../main/section_1/practice_1/practice-1-1.js");
 
 describe('practice-1-1', function() {
 
