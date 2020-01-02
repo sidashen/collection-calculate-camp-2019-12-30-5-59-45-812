@@ -2,7 +2,6 @@
 
 function average_uneven(collection) {
   //在这里写入代码
-  var collection = [1,2,3,4,5,6,7,8,9,10];
   var newArr = collection.filter(item => {
     return item % 2 !== 0;
   });
