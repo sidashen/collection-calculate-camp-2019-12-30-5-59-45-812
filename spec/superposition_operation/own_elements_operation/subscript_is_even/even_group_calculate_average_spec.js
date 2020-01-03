@@ -6,7 +6,7 @@ describe('even_group_calculate_average', function() {
   var collection_b = [1, 3, 5, 7, 33, 55, 31, 555, 777];
   var collection_c = [344, 256, 55, 777, 322, 180];
 
-  it('首先选出所有第偶数个元素，然后选出其中的偶数，按几位数分组，并计算每组的平均数', function() {
+  it('首先选出所有第奇数个元素，然后选出其中的偶数，按几位数分组，并计算每组的平均数', function() {
     var result = even_group_calculate_average(collection_a);
     expect(result).toEqual([4, 56, 556]);
   });
