@@ -6,7 +6,7 @@ var even_group_calculate_average = function(collection){
   var sumHuns = 0;
   var evenIndexArr = getOddIndexItem(collection);
   var evenNum = getEvenNum(evenIndexArr);
-  ({ sumOnes, sumTens, sumHuns } = oddIndex(evenNum, sumOnes, newArr, sumTens, sumHuns));
+  oddIndex(evenNum, sumOnes, newArr, sumTens, sumHuns);
   return newArr;
 };
 
@@ -36,7 +36,6 @@ function oddIndex(evenNum, sumOnes, newArr, sumTens, sumHuns) {
   else {
     newArr.push(0);
   }
-  return { sumOnes, sumTens, sumHuns };
 }
 
 function getOddIndexItem(collection) {
